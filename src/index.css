@@ -1,0 +1,86 @@
+:root {
+  font-family: system-ui, sans-serif;
+  color: #eaeaf0;
+  background: #101014;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #171721, #0f0f12);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: 620;
+  letter-spacing: -0.03em;
+}
+
+label {
+  font-size: 0.75rem;
+  color: #bdbdc7;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #343444;
+  padding: 0.5rem 0.6rem;
+  background: rgba(20, 21, 31, 0.9);
+  color: #eaeaf0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.card {
+  backdrop-filter: blur(12px);
+  background: rgba(24, 25, 35, 0.75);
+  border: 1px solid rgba(80, 80, 120, 0.35);
+  border-radius: 14px;
+  padding: 0.85rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.muted {
+  color: #8d8d9f;
+}
+
+.pill {
+  display: inline-flex;
+  gap: 0.35rem;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.15rem 0.65rem;
+  font-size: 0.7rem;
+  background: rgba(80, 120, 255, 0.15);
+}
+
+kbd {
+  font-size: 0.65rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  padding: 0.05rem 0.35rem;
+  background: rgba(0, 0, 0, 0.35);
+}

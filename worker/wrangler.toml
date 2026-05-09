@@ -1,0 +1,10 @@
+name = "clicky-tauri-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-10-01"
+
+[vars]
+DEFAULT_DEEPGRAM_TTS_MODEL = "aura-2-thalia-en"
+
+# Secrets (production): wrangler secret put OPENROUTER_API_KEY
+#                       wrangler secret put DEEPGRAM_API_KEY
+# Local dev: copy .dev.vars.example -> .dev.vars

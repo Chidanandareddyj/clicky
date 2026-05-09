@@ -1,0 +1,84 @@
+html,
+body,
+#root {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+}
+
+.overlayRootMeasurement {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.buddyOrbMeasurement {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 38% 32%, #6aa9ff 0%, #385dff 62%, #1c3bb5 94%);
+  box-shadow:
+    0 12px 32px rgba(6, 9, 30, 0.45),
+    0 0 0 6px rgba(45, 100, 255, 0.25);
+  transition:
+    left 0.76s cubic-bezier(0.2, 0.76, 0.25, 1),
+    top 0.76s cubic-bezier(0.2, 0.76, 0.25, 1);
+}
+
+.buddyOrbMeasurement::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: inherit;
+  background: radial-gradient(circle at 40% 30%, rgba(255, 255, 255, 0.4), transparent 55%);
+}
+
+.buddyGlow {
+  position: absolute;
+  inset: auto auto auto auto;
+  width: 90px;
+  height: 90px;
+  left: 118px;
+  top: calc(100% - 200px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(90, 150, 255, 0.45), transparent 55%);
+  filter: blur(8px);
+}
+
+.buddyGlow.listening {
+  animation: orbPulseAnimate 2.05s infinite ease-in-out;
+}
+
+@keyframes orbPulseAnimate {
+  0% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+  55% {
+    opacity: 0.88;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.45;
+    transform: scale(0.92);
+  }
+}
+
+.bubbleOverlayMeasurement {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 440px;
+  padding: 0.55rem 0.74rem;
+  border-radius: 12px;
+  background: rgba(10, 12, 24, 0.78);
+  border: 1px solid rgba(130, 160, 255, 0.35);
+  color: #eaeaf8;
+  font-size: 0.74rem;
+  line-height: 1.4;
+}
